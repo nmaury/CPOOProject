@@ -1,0 +1,33 @@
+<div class="content">
+
+  <div class="namemap">
+    <div class="ecriture"> {{this.game_name}}</div> 
+    <div class="ecriture2">Player : {{this.user_name}}</div> 
+  </div>
+
+    <div class="pieces">
+    <img class="exit"  (click)="clickEnd()" src='assets/sprites/exit.png'/>
+    <img class="undo" (click)="clickBack()" src='assets/sprites/undo.png'/>
+    <img class="redo" (click)="clickForward()" src='assets/sprites/redo.png'/>
+    </div>
+    <div>
+    <circle-progress 
+      [percent]= getProgressBarScore()
+      [title]= getStringScore()
+      ></circle-progress>
+      </div>
+    
+    <div class="map">
+        <ng-container *ngFor="let y of [0,1,2,3,4,5,6,7,8,9]">
+          <ng-container *ngFor="let x of [0,1,2,3,4,5,6,7,8,9]">
+              <img class='tile'
+              id="Tile"
+              [attr.data-x]=x
+              [attr.data-y]=y
+              src={{getTiles(10*x+y)}}
+              />    
+          </ng-container>
+        </ng-container>
+      </div>
+    
+        

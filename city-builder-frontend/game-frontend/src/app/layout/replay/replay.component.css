@@ -1,0 +1,309 @@
+.tile {
+    user-select: none;
+    margin: 0 -21px;
+    transform: rotateZ(-45deg) rotateY(-60deg) scale(1.6);
+    clip-path: polygon(50px 0, 0 25px, 0 32px, 50px 58px, 100px 33px, 100px 25px, 50px 0);
+  }
+
+  .content{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    top: 0%;
+  
+    background-image: url("../../../assets/sprites/pierre.png");
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  div {
+      --size-cell: 58px;
+      --nb-cell: 10;
+      --z-rotate: 45deg;
+      --x-rotate: 60deg;
+    }
+    
+    .map {
+      line-height: 0;
+      position: absolute;
+      top: 70px;
+      left: 40pc;
+      transform: translateY(90px) scale(2) rotateX(var(--x-rotate)) rotateZ(var(--z-rotate));
+      margin: auto;
+      width: calc(var(--size-cell) * var(--nb-cell));
+      z-index: 1000;
+      background-color: white;
+    }
+    
+  
+   
+  
+      .origin {
+        user-select: none;
+        margin: 0 -21px;
+        transform: rotateZ(-45deg) rotateY(-60deg) scale(1.6);
+        clip-path: polygon(50px 0, 0 25px, 0 32px, 50px 58px, 100px 33px, 100px 25px, 50px 0);
+      }
+      .origin:hover{
+        opacity: 0.8;
+      }
+  
+      .tile_fountain {
+        user-select: none;
+        margin: 0 -21px;
+        transform: rotateZ(-45deg) rotateY(-60deg) scale(1.6);
+        clip-path: polygon(50px 0, 0 25px, 0 32px, 50px 58px, 100px 33px, 100px 25px, 50px 0);
+      }
+        .tile_fountain:hover {
+          opacity: 0.8;
+          cursor:url('../../../assets/fountain.svg'), auto;
+        }
+        .tile_house {
+          user-select: none;
+          margin: 0 -21px;
+          transform: rotateZ(-45deg) rotateY(-60deg) scale(1.6);
+          clip-path: polygon(50px 0, 0 25px, 0 32px, 50px 58px, 100px 33px, 100px 25px, 50px 0);
+        }
+          .tile_house:hover {
+            opacity: 0.8;
+            cursor:url('../../../assets/house.svg'), auto;
+          }
+  
+  
+          .tile_circus{
+            user-select: none;
+            margin: 0 -21px;
+            transform: rotateZ(-45deg) rotateY(-60deg) scale(1.6);
+            clip-path: polygon(50px 0, 0 25px, 0 32px, 50px 58px, 100px 33px, 100px 25px, 50px 0);
+          }
+            .tile_circus:hover {
+              opacity: 0.8;
+              cursor:url('../../../assets/circus.svg'), auto;
+            }
+        .tile_wind_turbine {
+              user-select: none;
+              margin: 0 -21px;
+              transform: rotateZ(-45deg) rotateY(-60deg) scale(1.6);
+              clip-path: polygon(50px 0, 0 25px, 0 32px, 50px 58px, 100px 33px, 100px 25px, 50px 0);
+            }
+              .tile_wind_turbine:hover {
+                opacity: 0.8;
+                cursor:url('../../../assets/wind_turbine.svg'), auto;
+              }
+              .water {
+                user-select: none;
+                margin: 0 -21px;
+                transform: rotateZ(-45deg) rotateY(-60deg) scale(1.6);
+                clip-path: polygon(50px 0, 0 25px, 0 32px, 50px 58px, 100px 33px, 100px 25px, 50px 0);
+              }
+                .water:hover {
+                  cursor:not-allowed;
+                  opacity: 0.8;
+                }
+              .tree {
+                  user-select: none;
+                  margin: 0 -21px;
+                  transform: rotateZ(-45deg) rotateY(-60deg) scale(1.6);
+                  clip-path: polygon(50px 0, 0 25px, 0 32px, 50px 58px, 100px 33px, 100px 25px, 50px 0);
+              }
+                .tree:hover {
+                    cursor:not-allowed;
+                    opacity: 0.8;
+                }
+                .piece_posee {
+                  user-select: none;
+                  margin: 0 -21px;
+                  transform: rotateZ(-45deg) rotateY(-60deg) scale(1.6);
+                  clip-path: polygon(50px 0, 0 25px, 0 32px, 50px 58px, 100px 33px, 100px 25px, 50px 0);
+                }
+                .piece_posee:hover {
+                  cursor:not-allowed;
+                  opacity: 0.8;
+                }
+      div2 {
+        --size-cell: 120px;
+        --border-cell: 5px;
+      }
+      .box1 {
+        position:absolute;
+        top:20px;
+        right:100px;
+        font-size: x-large;
+      }
+      
+      .aclass {
+        box-sizing: border-box;
+        border: var(--border-cell) solid;
+        background-color: blue;
+        width: var(--size-cell);
+        height: var(--size-cell);
+        float: left;
+        padding: 0;
+        margin: 0;
+      }
+      .pieces {
+        position: absolute;
+        top: 800px;
+        left: 50px;
+        height:100px;
+        width: 500px;
+        border: solid 1px #ccc;
+        background: white;
+        border-radius: 4px;
+        overflow: hidden;
+        text-align: center;
+        -webkit-filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+        filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+      }
+      .house{
+        position: absolute;
+        top: 20px;
+        left: 55px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 20px;
+        width:50px;
+        border: solid 1px #ccc;
+        background: white;
+        border-radius: 4px;
+        text-align: center;
+        -webkit-filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+        filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+      }
+      .house:hover{
+        opacity: 0.8;
+      }
+  
+      .windturbine{
+        position: absolute;
+        top: 20px;
+        left: 155px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 20px;
+        width:50px;
+        border: solid 1px #ccc;
+        background: white;
+        border-radius: 4px;
+        text-align: center;
+        -webkit-filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+        filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+      }
+      .windturbine:hover{
+        opacity:0.8;
+      }
+      .circus{
+        position: absolute;
+        top: 20px;
+        left: 255px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 20px;
+        width:50px;
+        border: solid 1px #ccc;
+        background: white;
+        border-radius: 4px;
+        text-align: center;
+        -webkit-filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+        filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+      }
+      .circus:hover{
+        opacity:0.8;
+      }
+      .fountain{
+        position: absolute;
+        top: 20px;
+        left: 355px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 20px;
+        width:50px;
+        border: solid 1px #ccc;
+        background: white;
+        border-radius: 4px;
+        text-align: center;
+        -webkit-filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+        filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+      }
+      .fountain:hover{
+        opacity:0.8;
+      }
+      .undo{
+        position: absolute;
+        top: 25px;
+        left: 50px;
+        height: 60px;
+        width:60px;
+        border: none;
+        background: none;
+        text-align: center;
+       
+      }
+      .redo{
+        position: absolute;
+        top: 25px;
+        left: 220px;
+        height: 60px;
+        width:60px;
+        border: none;
+        background: none;
+        text-align: center;
+       
+      }
+      .exit{
+        position: absolute;
+        top: 25px;
+        right: 50px;
+        height: 60px;
+        width:60px;
+        border: none;
+        background: none;
+        text-align: center;
+       
+      }
+      .pieces {
+        position: absolute;
+        top: 700px;
+        left: 50px;
+        height:100px;
+        width: 500px;
+        background-color: #4e403900;
+        border: none;
+        background-image: url("../../../assets/sprites/replay_button.png");
+        background-size: 100% 100%;
+        background-position: center;
+        text-align: center;
+      }
+      .namemap{
+        position: absolute;
+        top:20px;
+        left : 250px;
+        width: 300px;
+        height:200px;
+        background-image: url('../../../assets/sprites/wood.png');
+        background-size: 100% 100%;
+        background-position: center;
+        text-align: center;
+        }
+
+        .ecriture{
+          position: relative;
+          top: 50px;
+          left: 10px;
+          font-family: Georgia, serif;
+          font-size: 35px;
+        font-weight: bold;
+        color: #f8f8f8;
+        text-shadow: 0px 10px 10px #333533;
+        }
+        .ecriture2{
+          position: relative;
+          top: 70px;
+          left: 10px;
+          font-family: Georgia, serif;
+          font-size: 25px;
+          
+        font-weight: bold;
+        color: #f8f8f8;
+        text-shadow: 0px 10px 10px #333533;
+        }

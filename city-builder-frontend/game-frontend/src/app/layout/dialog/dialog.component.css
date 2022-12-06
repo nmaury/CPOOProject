@@ -1,0 +1,134 @@
+.box{
+    width: 1px;
+    height: 1px;
+}
+.content{
+    bottom : 50%;
+    left: 35%;
+    width: 450px;
+    height: 700px;
+
+    position: absolute;
+    top: 0%;
+    background-color: rgba(240, 248, 255, 0);
+    background-image: url('../../../assets/sprites/dialog.png');
+    background-size: 100% 100%;
+      background-position: center;
+}
+
+h1{
+    position: relative;
+    top: 15px;
+    text-align: center;
+    font-family: Georgia, serif;
+      font-size: 35px;
+    font-weight: bold;
+    color: #f8f8f8;
+    text-shadow: 0px 10px 10px #333533;
+}
+h2{
+    position: relative;
+    top: 75px;
+    left : 20px;
+
+}
+.player1{
+    position: relative;
+    top: 130px;
+    left:200px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #040404;
+    text-shadow: 0px 10px 10px #333533;
+}
+.score1{
+    position: relative;
+    top: 140px;
+    left : 200px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #040404;
+    text-shadow: 0px 10px 10px #333533;
+}
+.player2{
+    position: relative;
+    top: 180px;
+    left:200px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #040404;
+    text-shadow: 0px 10px 10px #333533;
+}
+.score2{
+    position: relative;
+    top: 190px;
+    left : 200px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #040404;
+    text-shadow: 0px 10px 10px #333533;
+}
+.player3{
+    position: relative;
+    top: 230px;
+    left:200px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #040404;
+    text-shadow: 0px 10px 10px #333533;
+}
+.score3{
+    position: relative;
+    top: 240px;
+    left : 200px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #040404;
+    text-shadow: 0px 10px 10px #333533;
+}
+.player4{
+    position: relative;
+    top: 280px;
+    left:200px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #040404;
+    text-shadow: 0px 10px 10px #333533;
+}
+.score4{
+    position: relative;
+    top: 290px;
+    left : 200px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #040404;
+    text-shadow: 0px 10px 10px #333533;
+}
+.player5{
+    position: relative;
+    top: 330px;
+    left:200px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #040404;
+    text-shadow: 0px 10px 10px #333533;
+}
+.score5{
+    position: relative;
+    top: 340px;
+    left : 200px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #040404;
+    text-shadow: 0px 10px 10px #333533;
+}

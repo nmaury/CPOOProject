@@ -1,0 +1,59 @@
+<!-- Affichage des informations en haut à gauche (score, player_name...)-->
+<div class="content">
+<div class="namemap">
+  <div class="ecriture"> {{this.mapname}}</div> 
+  <div class="ecriture2">Player : {{this.user_name}}</div> 
+  <img class="edit" (click)="modifyUserName()" src='../assets/sprites/edit.png'/>
+</div>
+
+<!-- Bouton pour visualiser le classement -->
+<img class="classement" (click)="openDialog()" src='../assets/sprites/cloud.png'/>
+
+<!-- Affichae du score avec barre de progression -->
+<div class="circle">
+<circle-progress 
+  [percent]= getProgressBarScore()
+  [title]= getStringScore()
+></circle-progress>
+</div>
+
+<!-- Affichae des 100 tuiles -->
+<div class="map">
+    <ng-container *ngFor="let y of [0,1,2,3,4,5,6,7,8,9]">
+      <ng-container *ngFor="let x of [0,1,2,3,4,5,6,7,8,9]">
+          <img class='tile'
+          id="Tile"
+          (click)="clickTile(x,y)"
+          [attr.data-x]=x
+          [attr.data-y]=y
+          src={{getTiles(10*x+y)}}
+          (mouseover)="displayScores(x,y)"
+          (mouseleave)="resetScore()"
+          />
+          <!-- Affichae des scores sur les tuiles -->
+          <div class="displayScore"> {{displayMainScore()}}</div>
+            <ng-container *ngFor="let i of array">
+              <ng-container *ngIf="this.neighbourTiles[i][1]==x">
+                <ng-container *ngIf="this.neighbourTiles[i][2]==y">
+                      <div class="displayScore2" > {{getNScore(i)}} </div>
+                  </ng-container>
+                </ng-container>
+            </ng-container>
+           
+        </ng-container>
+      </ng-container>
+</div>
+
+    
+<!-- affichage du stock en bas à gauche et des bouttons undo, redo et exit-->
+  <div class="pieces">
+    <mat-card class="fountain"  matBadge="{{nb_free_fountain}}" (click)="clickFountain()" matBadgeSize="large"><img  mat-card-image src='assets/fountain.svg'/></mat-card>
+    <mat-card class="house" matBadge="{{nb_free_house}}" (click)="clickHouse()"matBadgeSize="large"><img  mat-card-image src='assets/house.svg' /></mat-card>
+    <mat-card class="windturbine"  matBadge="{{nb_free_windturbine}}" (click)="clickWind()" matBadgeSize="large"><img  mat-card-image src='assets/wind_turbine.svg' ></mat-card>
+     <mat-card class="circus"  matBadge="{{nb_free_circus}}" (click)="clickCircus()" matBadgeSize="large"><img  mat-card-image src='assets/circus.svg' /></mat-card>
+    <img class= "undo" (click)="clickUndo()" src='assets/sprites/undo.png'/>
+    <img class= "redo"  (click)="clickRedo()" src='assets/sprites/redo.png'/>
+    <img class= "exit" (click)="openExitDialog()" src='assets/sprites/exit.png'/>
+  </div>
+  
+  </div>

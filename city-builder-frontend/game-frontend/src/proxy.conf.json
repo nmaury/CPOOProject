@@ -1,0 +1,8 @@
+{
+    "/city/*": {
+    "target": "http://city-builder-backend:4444/",
+    "secure": false,
+    "changeOrigin": true
+    }
+}
+    

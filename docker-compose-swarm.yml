@@ -1,0 +1,36 @@
+#docker stack deploy -c .\docker-compose-swarm.yml city-builder
+version: "3.9"
+services:
+  frontend:
+    image: city-builder-frontend:latest
+    ports:
+      - mode: host
+        target: 4200
+        published: 4200
+    networks:
+      - city-builder
+    deploy:
+      placement:
+        constraints:
+          - 'node.role==manager'
+  
+  backend:
+    image: city-builder-backend:latest
+    ports:
+      - mode: host
+        target: 4444
+        published: 4444
+    networks:
+      - city-builder
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - 'node.role==manager'
+
+networks:
+  city-builder:
+    driver: overlay
+
+

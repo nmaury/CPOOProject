@@ -1,0 +1,10 @@
+
+<div class="content">
+<select class="game">
+    <option  *ngFor="let g of this.games" value="{{g.id}}">
+        {{g.game_name}}
+    </option>
+</select>
+<img class="fond" src='../../../assets/sprites/button.png'/>
+<img (click)="ToReplay()" class="start"  src='../../../assets/sprites/start.png'/>
+</div>
